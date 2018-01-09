@@ -10,6 +10,7 @@ import fetch from './common/fetch'
 import * as Ons from "react-onsenui"
 import * as ons from "onsenui"
 import * as path from './common/path'
+import loginBackgroundImage from '../image/login-bg.jpg'
 
 class Register extends Component{
     constructor(props) {
@@ -45,13 +46,14 @@ class Register extends Component{
 
     render(){
            return (
-                <Ons.Page renderToolbar={() => (
-                <Ons.Toolbar>
+                <Ons.Page className="contentT" renderToolbar={() => (
+                <Ons.Toolbar className="none">
                     <div className='left'><Ons.BackButton /></div>
                     <div className='center'>注册</div>
                 </Ons.Toolbar>
             )} >
                     <section style={{ textAlign: 'center' }}>
+                        <img className="login-img" src={loginBackgroundImage} />
                         <p>
                             <Ons.Icon icon="ion-person" />
                             <Ons.Input
