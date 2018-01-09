@@ -82,8 +82,8 @@ class Login extends Component {
                             placeholder='Password' />
                     </p>
                     <p>
-                        <Ons.Button onClick={this.handleClick.bind(this)}>登陆</Ons.Button>
-                        <Ons.Button onClick={this.register.bind(this)}>注册</Ons.Button>
+                        <Ons.Button className="one" onClick={this.handleClick.bind(this)}>登陆</Ons.Button>
+                        <Ons.Button onClick={this.register.bind(this)}>注 册</Ons.Button>
                     </p>
                 </section>
             </Ons.Page>
