@@ -1,0 +1,12 @@
+.contentT .toolbar+.page__background+.page__content {
+    top: 0;
+}
+.none {
+    display: none;
+}
+.login-img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top:0;
+}

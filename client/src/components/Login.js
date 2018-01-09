@@ -12,6 +12,7 @@ import * as ons from "onsenui"
 import * as path from './common/path'
 import Register from './Register'
 import Home from './Home'
+import loginBackgroundImage from '../image/login-bg.jpg'
 
 class Login extends Component {
     constructor(props) {
@@ -56,12 +57,13 @@ class Login extends Component {
     }
     render() {
         return (
-            <Ons.Page renderToolbar={() => (
-                <Ons.Toolbar>
+            <Ons.Page className="contentT" renderToolbar={() => (
+                <Ons.Toolbar className="none">
                     <div className='center'>登陆</div>
                 </Ons.Toolbar>
             )}>
                 <section style={{ textAlign: 'center' }}>
+                    <img className="login-img" src={loginBackgroundImage} />
                     <p>
                         <Ons.Icon icon="ion-person" />
                         <Ons.Input
