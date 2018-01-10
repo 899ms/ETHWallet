@@ -67,9 +67,14 @@ class Home extends Component {
 
     render() {
         return (
-            <Ons.Page>
-                <Ons.List>
-                    <Ons.ListItem>
+            <Ons.Page renderToolbar={() => (
+                <Ons.Toolbar className="red-bg">
+                    <div className='center'>钱包充值</div>
+                </Ons.Toolbar>
+            )}>
+            <div className="red-list">
+            <Ons.List modifier="home">
+                    <Ons.ListItem modifier="canvas">
                         ETH地址二维码
                      <QRCode size={256} value={this.utf16to8(this.props.address)} />
                     </Ons.ListItem>
@@ -101,6 +106,7 @@ class Home extends Component {
                         <Ons.Button onClick={this.handleClick.bind(this)} >充值</Ons.Button>
                     </Ons.ListItem>
                 </Ons.List>
+            </div>
             </Ons.Page >
         )
     }

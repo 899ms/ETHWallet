@@ -64,11 +64,25 @@
     margin-top: 120px;
 }
 
-
-
-
-
-
+.red-bg, .red-list {
+    background: #e12907;
+    box-shadow: none;
+}
+.red-bg .toolbar__title {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+.red-list {
+    min-height: 700px;
+}
+.list--home {
+    width: 80%;
+    margin-left: 10%;
+}
+.list--home .list-item--canvas .list-item__center {
+    width: 40%;
+}
 
 
 
