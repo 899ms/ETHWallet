@@ -9,11 +9,10 @@
     width: 100%;
     left: 0;
     top:0;
-
 }
 .list--login {
     color: #fff;
-    margin-top: 220px;
+    margin-top: 260px;
 }
 .list--login .list-item {
     padding-left: 0;
@@ -37,6 +36,12 @@
 .list--login .text-input {
     color: #fff;
 }
+.list--login .text-input--underbar {
+    border-bottom: 1px solid #fff;
+}
+.list--login .text-input--material {
+    background-image: none;
+}
 .button--btn-transparent {
     width: calc(100% - 88px) !important;
     margin: 0 8px 8px;
@@ -47,3 +52,38 @@
     border-radius: 22px;
     margin-top: 30px;
 }
+.logo-img {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 40%;
+    margin-left: 30%;
+}
+
+
+.list--register{
+    margin-top: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

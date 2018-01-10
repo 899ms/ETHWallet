@@ -13,6 +13,7 @@ import * as path from './common/path'
 import Register from './Register'
 import Home from './Home'
 import loginBackgroundImage from '../image/login-bg.jpg'
+import loginLogoImage from '../image/logo.png'
 
 class Login extends Component {
     constructor(props) {
@@ -73,6 +74,7 @@ class Login extends Component {
                 <img className="login-img" src={loginBackgroundImage} />
 
                 <Ons.List modifier="login" style={{ textAlign: 'center' }}>
+                    <img className="logo-img" src={loginLogoImage} />
                     <Ons.ListItem>
                         <Ons.Icon icon="ion-person" />
                         <Ons.Input

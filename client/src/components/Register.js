@@ -48,13 +48,8 @@ class Register extends Component {
         return (
             <Ons.Page className="contentT" >
                 <img className="login-img" src={loginBackgroundImage} />
-                <Ons.List modifier="login" style={{ textAlign: 'center' }}>
+                <Ons.List modifier="login register" style={{ textAlign: 'center' }}>
                     <Ons.ListItem>
-                        <div className='left'><Ons.BackButton /></div>
-                    </Ons.ListItem>
-
-                    <Ons.ListItem>
-
                         <Ons.Icon icon="ion-person" />
                         <Ons.Input
                             value={this.state.username}
@@ -73,7 +68,10 @@ class Register extends Component {
                             float
                             placeholder='Password' />
                     </Ons.ListItem>
-                    <Ons.Button modifier="btn-transparent" onClick={this.handleClick.bind(this)}>注册</Ons.Button>
+
+                    <Ons.Button modifier="btn-transparent" onClick={this.handleClick.bind(this)}>注 册</Ons.Button>
+                    <Ons.Button modifier="btn-transparent" onClick={this.handleClick.bind(this)}>返 回</Ons.Button>
+
                 </Ons.List>
             </Ons.Page>
         )
