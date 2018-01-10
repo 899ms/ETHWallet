@@ -62,9 +62,11 @@ class Login extends Component {
                     <div className='center'>登陆</div>
                 </Ons.Toolbar>
             )}>
-                <section style={{ textAlign: 'center' }}>
-                    <img className="login-img" src={loginBackgroundImage} />
-                    <p>
+
+                <img className="login-img" src={loginBackgroundImage} />
+
+                <Ons.List modifier="login" style={{ textAlign: 'center' }}>
+                    <Ons.ListItem>
                         <Ons.Icon icon="ion-person" />
                         <Ons.Input
                             value={this.state.username}
@@ -72,8 +74,8 @@ class Login extends Component {
                             modifier='underbar'
                             float
                             placeholder='Username' />
-                    </p>
-                    <p>
+                    </Ons.ListItem>
+                    <Ons.ListItem>
                         <ons-icon icon="ion-ios-locked" />
                         <Ons.Input
                             value={this.state.password}
@@ -82,12 +84,12 @@ class Login extends Component {
                             type='password'
                             float
                             placeholder='Password' />
-                    </p>
-                    <p>
-                        <Ons.Button className="one" onClick={this.handleClick.bind(this)}>登陆</Ons.Button>
-                        <Ons.Button onClick={this.register.bind(this)}>注 册</Ons.Button>
-                    </p>
-                </section>
+                    </Ons.ListItem>
+
+                    <Ons.Button modifier="btn-transparent" onClick={this.handleClick.bind(this)}>登 陆</Ons.Button>
+                    <Ons.Button modifier="btn-transparent" onClick={this.register.bind(this)}>注 册</Ons.Button>
+
+                </Ons.List>
             </Ons.Page>
         )
     }

@@ -52,9 +52,9 @@ class Register extends Component{
                     <div className='center'>注册</div>
                 </Ons.Toolbar>
             )} >
-                    <section style={{ textAlign: 'center' }}>
-                        <img className="login-img" src={loginBackgroundImage} />
-                        <p>
+                    <img className="login-img" src={loginBackgroundImage} />
+                        <Ons.List modifier="login" style={{ textAlign: 'center' }}>
+                            <Ons.ListItem>
                             <Ons.Icon icon="ion-person" />
                             <Ons.Input
                                 value={this.state.username}
@@ -62,8 +62,8 @@ class Register extends Component{
                                 modifier='underbar'
                                 float
                                 placeholder='Username' />
-                        </p>
-                        <p>
+                            </Ons.ListItem>
+                            <Ons.ListItem>
                             <ons-icon icon="ion-ios-locked" />
                             <Ons.Input
                                 value={this.state.password}
@@ -72,11 +72,9 @@ class Register extends Component{
                                 type='password'
                                 float
                                 placeholder='Password' />
-                        </p>
-                        <p>
-                            <Ons.Button onClick={this.handleClick.bind(this)}>注册</Ons.Button>
-                        </p>
-                    </section>
+                            </Ons.ListItem>
+                            <Ons.Button modifier="btn-transparent" onClick={this.handleClick.bind(this)}>注册</Ons.Button>
+                        </Ons.List>
                 </Ons.Page>
         )
     }

@@ -9,4 +9,41 @@
     width: 100%;
     left: 0;
     top:0;
+
+}
+.list--login {
+    color: #fff;
+    margin-top: 220px;
+}
+.list--login .list-item {
+    padding-left: 0;
+    width: 70%;
+    margin-left: 15%;
+}
+.list--login .list-item .list-item__center .ons-icon {
+    color: #fff;
+    font-size: 26px;
+    margin-right: 8px;
+}
+.list--login .list-item,
+.list--login .list-item .list-item__center {
+    background-image: none;
+}
+
+.list--login ons-input {
+    color: #fff;
+    width: calc(100% - 30px) !important;
+}
+.list--login .text-input {
+    color: #fff;
+}
+.button--btn-transparent {
+    width: calc(100% - 88px) !important;
+    margin: 0 8px 8px;
+    text-align: center;
+    background: none;
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 22px;
+    margin-top: 30px;
 }
