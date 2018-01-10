@@ -2,7 +2,7 @@
  * @Author: qugang 
  * @Date: 2018-01-07 00:39:16 
  * @Last Modified by: qugang
- * @Last Modified time: 2018-01-07 23:53:36
+ * @Last Modified time: 2018-01-10 16:39:51
  */
 
 import React, { Component } from 'react'
@@ -26,24 +26,31 @@ class Login extends Component {
     handleClick(e) {
 
         const props = this.props
-        fetch(path.login, {
-            username: this.state.username,
-            userpwd: this.state.password
-        }).then(function (res) {
-            if (res.resultCode === "1000") {
-                window.localStorage.token = res.token
 
-                props.navigator.pushPage({
-                    comp: Home, props: {
-                        key: "Home", navigator: props.navigator,
-                        username: res.user.username, address: res.user.ethAddress
-                    }
-                })
-            }
-            else {
-                ons.notification.alert('登陆失败')
+        props.navigator.pushPage({
+            comp: Home, props: {
+                key: "Home", navigator: props.navigator,
+                username: "test", address: "test"
             }
         })
+        // fetch(path.login, {
+        //     username: this.state.username,
+        //     userpwd: this.state.password
+        // }).then(function (res) {
+        //     if (res.resultCode === "1000") {
+        //         window.localStorage.token = res.token
+
+        //         props.navigator.pushPage({
+        //             comp: Home, props: {
+        //                 key: "Home", navigator: props.navigator,
+        //                 username: res.user.username, address: res.user.ethAddress
+        //             }
+        //         })
+        //     }
+        //     else {
+        //         ons.notification.alert('登陆失败')
+        //     }
+        // })
     }
     handleUsernameChange(e) {
         this.setState({ username: e.target.value });

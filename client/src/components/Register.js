@@ -2,7 +2,7 @@
  * @Author: qugang 
  * @Date: 2018-01-07 14:26:03 
  * @Last Modified by: qugang
- * @Last Modified time: 2018-01-07 23:33:04
+ * @Last Modified time: 2018-01-10 16:40:37
  */
 
 import React, { Component } from 'react'
@@ -12,7 +12,7 @@ import * as ons from "onsenui"
 import * as path from './common/path'
 import loginBackgroundImage from '../image/login-bg.jpg'
 
-class Register extends Component{
+class Register extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -44,38 +44,38 @@ class Register extends Component{
         this.setState({ password: e.target.value });
     }
 
-    render(){
-           return (
-                <Ons.Page className="contentT" renderToolbar={() => (
-                <Ons.Toolbar className="none">
-                    <div className='left'><Ons.BackButton /></div>
-                    <div className='center'>注册</div>
-                </Ons.Toolbar>
-            )} >
-                    <img className="login-img" src={loginBackgroundImage} />
-                        <Ons.List modifier="login" style={{ textAlign: 'center' }}>
-                            <Ons.ListItem>
-                            <Ons.Icon icon="ion-person" />
-                            <Ons.Input
-                                value={this.state.username}
-                                onChange={this.handleUsernameChange.bind(this)}
-                                modifier='underbar'
-                                float
-                                placeholder='Username' />
-                            </Ons.ListItem>
-                            <Ons.ListItem>
-                            <ons-icon icon="ion-ios-locked" />
-                            <Ons.Input
-                                value={this.state.password}
-                                onChange={this.handlePasswordChange.bind(this)}
-                                modifier='underbar'
-                                type='password'
-                                float
-                                placeholder='Password' />
-                            </Ons.ListItem>
-                            <Ons.Button modifier="btn-transparent" onClick={this.handleClick.bind(this)}>注册</Ons.Button>
-                        </Ons.List>
-                </Ons.Page>
+    render() {
+        return (
+            <Ons.Page className="contentT" >
+                <img className="login-img" src={loginBackgroundImage} />
+                <Ons.List modifier="login" style={{ textAlign: 'center' }}>
+                    <Ons.ListItem>
+                        <div className='left'><Ons.BackButton /></div>
+                    </Ons.ListItem>
+
+                    <Ons.ListItem>
+
+                        <Ons.Icon icon="ion-person" />
+                        <Ons.Input
+                            value={this.state.username}
+                            onChange={this.handleUsernameChange.bind(this)}
+                            modifier='underbar'
+                            float
+                            placeholder='Username' />
+                    </Ons.ListItem>
+                    <Ons.ListItem>
+                        <ons-icon icon="ion-ios-locked" />
+                        <Ons.Input
+                            value={this.state.password}
+                            onChange={this.handlePasswordChange.bind(this)}
+                            modifier='underbar'
+                            type='password'
+                            float
+                            placeholder='Password' />
+                    </Ons.ListItem>
+                    <Ons.Button modifier="btn-transparent" onClick={this.handleClick.bind(this)}>注册</Ons.Button>
+                </Ons.List>
+            </Ons.Page>
         )
     }
 
