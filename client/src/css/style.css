@@ -21,8 +21,8 @@
 }
 .list--login .list-item .list-item__center .ons-icon {
     color: #fff;
-    font-size: 26px;
-    margin-right: 8px;
+    font-size: 28px;
+    margin-right: 12px;
 }
 .list--login .list-item,
 .list--login .list-item .list-item__center {
@@ -31,7 +31,7 @@
 
 .list--login ons-input {
     color: #fff;
-    width: calc(100% - 30px) !important;
+    width: calc(100% - 36px) !important;
 }
 .list--login .text-input {
     color: #fff;
