@@ -68,46 +68,51 @@ class Home extends Component {
     render() {
         return (
             <Ons.Page renderToolbar={() => (
-                <Ons.Toolbar className="red-bg">
+                <Ons.Toolbar modifier="title">
                     <div className='center'>钱包充值</div>
                 </Ons.Toolbar>
             )}>
             <div className="red-list">
-            <Ons.List modifier="home">
-                    <Ons.ListItem modifier="canvas">
-                        ETH地址二维码
-                     <QRCode size={256} value={this.utf16to8(this.props.address)} />
-                    </Ons.ListItem>
-                    <Ons.ListItem>
-                        <ons-icon icon="ion-ios-person-outline" />
-                        您的账号<span className="right">{this.name}</span>
-                    </Ons.ListItem>
-                    <Ons.ListItem>
-                        <ons-icon icon="ion-ios-location-outline" />
-                        ETH地址<span className="right">{this.props.address}</span>
-                    </Ons.ListItem>
-                    <Ons.ListItem>
-                        <Ons.Input
-                            value={this.state.privateKey}
-                            onChange={this.handleprivateKeyChange.bind(this)}
-                            modifier='underbar'
-                            float
-                            placeholder='转账私钥' />
-                    </Ons.ListItem>
-                    <Ons.ListItem>
-                        <Ons.Input
-                            value={this.state.value}
-                            onChange={this.handleValueChange.bind(this)}
-                            modifier='underbar'
-                            float
-                            placeholder='转账ETH' />
-                    </Ons.ListItem>
-                    <Ons.ListItem>
-                        <Ons.Button onClick={this.handleClick.bind(this)} >充值</Ons.Button>
-                    </Ons.ListItem>
-                </Ons.List>
+                <div className="code-tiele">  ETH地址二维码  </div>
+                <Ons.List modifier="home">
+                        <Ons.ListItem modifier="canvas">
+                            <div className="code">
+                                <QRCode size={128} value={this.utf16to8(this.props.address)} />
+                            </div>
+                        </Ons.ListItem>
+                        <div className="borderT"><span /></div>
+
+                        <Ons.ListItem modifier="home-message marginTS">
+                            您的账号<span className="right">{this.name}</span>
+                        </Ons.ListItem>
+                        <Ons.ListItem modifier="home-message">
+                            ETH地址<span className="right">{this.props.address}</span>
+                        </Ons.ListItem>
+
+                        <Ons.ListItem modifier="home-input marginT">
+                            <ons-icon icon="ion-ios-person-outline" />
+                            <Ons.Input
+                                value={this.state.privateKey}
+                                onChange={this.handleprivateKeyChange.bind(this)}
+                                modifier='underbar'
+                                float
+                                placeholder='请输入转账私钥' />
+                        </Ons.ListItem>
+                        <Ons.ListItem modifier="home-input marginB">
+                            <ons-icon icon="ion-ios-location-outline" />
+                            <Ons.Input
+                                value={this.state.value}
+                                onChange={this.handleValueChange.bind(this)}
+                                modifier='underbar'
+                                float
+                                placeholder='请输入转账ETH' />
+                        </Ons.ListItem>
+                    </Ons.List>
+
+                    <Ons.Button modifier="btn-red" onClick={this.handleClick.bind(this)} >充 值</Ons.Button>
+
             </div>
-            </Ons.Page >
+        </Ons.Page >
         )
     }
 }
